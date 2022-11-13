@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 650px;
+    padding: 20px;
+    margin: 20px 30px;
+    box-shadow: 0px 10px 20px #ABB2B9;
+}
+
+.container form h1 {
+    text-align: left;
+    color: #2b3f3f;
+    font-size: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid silver;
+    margin-bottom: 5px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content .input-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 48%;
+}
+
+.input-box input {
+    padding: 0px 5px;
+    margin-top: 10px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid silver;
+    border-radius: 5px;
+
+}
+
+.input-box input:is(:focus, :valid) {
+    box-shadow: 0px 3px 5px #ABB2B9;
+    border: none;
+    outline: none;
+}
+
+.input-box,
+label .gender-title {
+    font-weight: bold;
+    color: #2b3f3f;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+.footer .gender-title {
+    font-weight: bold;
+    color: #2b3f3f;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+.footer .gender-category {
+    color: gray;
+}
+
+.gender-category label {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.gender-category label,
+.gender-category input {
+    cursor: pointer;
+}
+
+.footer .alert p {
+    padding: 20px;
+    font-size: 14px;
+    color: dimgray;
+    margin: 5px 0px;
+}
+
+.footer .button-container {
+
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.footer .button-container .btn {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to right, rgba(255, 17, 0, 0.845), rgba(255, 0, 255, 0.9));
+    transition: all s;
+}
+
+.footer .button-container .btn:hover {
+    background: linear-gradient(to left, rgba(255, 17, 0, 0.845), rgba(255, 0, 255, 0.9));
+
+}
+
+@media(max-width:500px) {
+    body {
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .container {
+
+        min-width: 300px;
+    }
+
+    .content {
+
+        max-height: 500px;
+        overflow: auto;
+        padding: 5px;
+
+    }
+
+    .content .input-box {
+        width: 100%;
+    }
+
+    .input-box:nth-child(2n) {
+        justify-content: space-around;
+    }
+
+    .input-box input {
+        padding: 0px 5px;
+        margin-top: 5px;
+        height: 60px;
+    }
+
+    .input-box,
+    label .gender-title {
+        font-size: 20px;
+    }
+
+    .footer .alert p {
+        padding: 10px;
+        font-size: 18px;
+
+    }
+
+    .footer .gender-title {
+        font-size: 20px;
+    }
+
+    .gender-category label {
+        font-size: 19px;
+    }
+}
+
+@media(max-width:400px) {
+
+    .input-box,
+    label,
+    input {
+        font-size: 20px;
+    }
+}
